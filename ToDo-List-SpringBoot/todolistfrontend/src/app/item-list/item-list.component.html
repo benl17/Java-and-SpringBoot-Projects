@@ -1,0 +1,19 @@
+<h1>Item List</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Task name: </th>
+            <th>Task due date: </th>
+            <th>Task importance: </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor = "let item of items">
+            <td> {{ item.itemName }} </td>
+            <td> {{ item.dueDate }} </td>
+            <td> {{ item.itemImportance }} </td>
+        </tr>
+    </tbody>
+</table>
