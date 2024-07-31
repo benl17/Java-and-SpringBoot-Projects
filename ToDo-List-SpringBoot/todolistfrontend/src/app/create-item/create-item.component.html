@@ -1,0 +1,18 @@
+<h3> Create new Task </h3>
+<form (ngSubmit) = "onSubmit()">
+    <div class="form-group">
+        <label>Name of task: </label>
+        <input type="text" class="form-control" id="itemName"
+            [(ngModel)] = "item.itemName" name="itemName">
+
+        <label>Task due date (MM/DD/YY): </label>
+        <input type="text" class="form-control" id="dueDate"
+            [(ngModel)] = "item.dueDate" name="dueDate">
+
+        <label>Task importance (1 most important, 5 least important): </label>
+        <input type="text" class="form-control" id="itemImportance"
+            [(ngModel)] = "item.itemImportance" name="itemImportance">
+
+        <button class="btn btn-success" type="submit">Create Task</button>
+    </div>
+</form>
