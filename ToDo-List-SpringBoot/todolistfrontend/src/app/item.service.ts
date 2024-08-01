@@ -15,4 +15,8 @@ export class ItemService {
   getItemsList(): Observable<Item[]> {
     return this.httpClient.get<Item[]>(`${this.baseURL}`);
   }
+
+  createItem(item: Item): Observable<Object> {
+    return this.httpClient.post(`${this.baseURL}`, item);
+  }
 }
