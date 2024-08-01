@@ -6,6 +6,7 @@
             <th>Task name: </th>
             <th>Task due date: </th>
             <th>Task importance: </th>
+            <th> Actions </th>
         </tr>
     </thead>
 
@@ -14,6 +15,9 @@
             <td> {{ item.itemName }} </td>
             <td> {{ item.dueDate }} </td>
             <td> {{ item.itemImportance }} </td>
+            <td>
+                <button (click) = "updateItem(item.itemID)" class="btn btn-info"> Update Task </button>
+            </td>
         </tr>
     </tbody>
 </table>
