@@ -19,4 +19,12 @@ export class ItemService {
   createItem(item: Item): Observable<Object> {
     return this.httpClient.post(`${this.baseURL}`, item);
   }
+
+  getItemById(id: number): Observable<Item> {
+    return this.httpClient.get<Item>(`${this.baseURL}/${id}`);
+  }
+
+  updateItem(id: number, item: Item): Observable<Object> {
+    return this.httpClient.put(`${this.baseURL}/${id}`, item);
+  }
 }
