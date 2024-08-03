@@ -1,9 +1,12 @@
 package todolistbackend.todolistbackend.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -55,5 +58,17 @@ public class ItemController {
 
         Item itemUpdated = itemRepository.save(item);
         return ResponseEntity.ok(itemUpdated);
+    }
+
+    //api to finish task
+    @DeleteMapping("/items/{id}")
+    public ResponseEntity<Map<String, Boolean>> finishTask(@PathVariable Long id) {
+        Item item = itemRepository.findById(id)
+            .orElseThrow(() -> new ResourceNotFoundException("Task with that ID does not exist." + id));
+
+        itemRepository.delete(item);
+        Map<String, Boolean> response = new HashMap<>();
+        response.put("deleted", Boolean.TRUE);
+        return ResponseEntity.ok(response);
     }
 }
