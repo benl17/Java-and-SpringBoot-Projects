@@ -25,10 +25,16 @@ export class UpdateItemComponent implements OnInit{
       });
   }
 
-  onSubmit() {
-    this.itemService.updateItem(this.id, this.item).subscribe(data => {
+  updateItem() {
+    this.itemService.updateItem(this.id, this.item).subscribe( data => {
+      console.log(data);
       this.goToItemList();
     });
+  }
+
+  onSubmit() {
+    console.log(this.item);
+    this.updateItem();
   }
 
   goToItemList() {

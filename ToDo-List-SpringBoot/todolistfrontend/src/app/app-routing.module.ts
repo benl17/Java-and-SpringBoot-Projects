@@ -8,7 +8,7 @@ const routes: Routes = [
   {path: 'items', component: ItemListComponent},
   {path: 'create-item', component: CreateItemComponent},
   {path: '', redirectTo: 'items', pathMatch: 'full'}, 
-  {path: 'update-item/:id', component: UpdateItemComponent}
+  {path: 'update-item/:id', component: UpdateItemComponent},
 ];
 
 @NgModule({

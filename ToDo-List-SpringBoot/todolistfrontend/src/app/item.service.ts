@@ -27,4 +27,8 @@ export class ItemService {
   updateItem(id: number, item: Item): Observable<Object> {
     return this.httpClient.put(`${this.baseURL}/${id}`, item);
   }
+
+  finishTask(id: number): Observable<Object> {
+    return this.httpClient.delete(`${this.baseURL}/${id}`);
+  }
 }

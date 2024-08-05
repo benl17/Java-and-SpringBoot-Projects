@@ -16,7 +16,8 @@
             <td> {{ item.dueDate }} </td>
             <td> {{ item.itemImportance }} </td>
             <td>
-                <button (click) = "updateItem(item.itemID)" class="btn btn-info"> Update Task </button>
+                <button (click) = "updateItem(item.itemID)" class="btn btn-blue"> Update Task </button>
+                <button (click) = "finishTask(item.itemID)" class="btn btn-red" style="margin-left: 10px"> Task Finished </button>
             </td>
         </tr>
     </tbody>

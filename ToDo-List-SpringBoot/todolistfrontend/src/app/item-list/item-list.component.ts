@@ -24,6 +24,12 @@ export class ItemListComponent implements OnInit {
   }
 
   updateItem(id: number) {
-    this.router.navigate(['update-item', id])
+    this.router.navigate(['update-item', id]);
+  }
+
+  finishTask(id: number) {
+    this.itemService.finishTask(id).subscribe( data => {
+      this.getItems(); 
+    });
   }
 }
