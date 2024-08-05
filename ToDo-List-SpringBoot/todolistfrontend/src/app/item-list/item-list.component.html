@@ -1,24 +1,15 @@
 <h1>Item List</h1>
 
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>Task name: </th>
-            <th>Task due date: </th>
-            <th>Task importance: </th>
-            <th> Actions </th>
-        </tr>
-    </thead>
-
-    <tbody>
-        <tr *ngFor = "let item of items">
-            <td> {{ item.itemName }} </td>
-            <td> {{ item.dueDate }} </td>
-            <td> {{ item.itemImportance }} </td>
-            <td>
-                <button (click) = "updateItem(item.itemID)" class="btn btn-blue"> Update Task </button>
-                <button (click) = "finishTask(item.itemID)" class="btn btn-red" style="margin-left: 10px"> Task Finished </button>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="task-container">
+    <div class="task-box" *ngFor="let item of items">
+        <div class="task-details">
+            <p><strong>Task name:</strong> {{ item.itemName }}</p>
+            <p><strong>Task due date:</strong> {{ item.dueDate }}</p>
+            <p><strong>Task importance:</strong> {{ item.itemImportance }}</p>
+        </div>
+        <div class="task-actions">
+            <button (click)="updateItem(item.itemID)" class="btn btn-blue">Update Task</button>
+            <button (click)="finishTask(item.itemID)" class="btn btn-red" style="margin-left: 10px">Task Finished</button>
+        </div>
+    </div>
+</div>

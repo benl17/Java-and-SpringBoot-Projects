@@ -11,6 +11,15 @@
     color: white;
 }
 
+.container-squish {
+    margin: 100px 0 0 200px;
+    width: 70%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
 .bg-lavender {
     background-color: #967bb6 !important;
 }
@@ -21,4 +30,26 @@
 
 .btn-red {
     background-color: #F88379;
+}
+
+.task-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between task boxes as needed */
+}
+
+.task-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    width: 300px; /* Adjust the width of the task boxes as needed */
+}
+
+.task-details p {
+    margin: 0;
+}
+
+.task-actions {
+    margin-top: 10px;
 }
