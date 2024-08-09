@@ -5,7 +5,14 @@
         <div class="task-details">
             <p><strong>Task name:</strong> {{ item.itemName }}</p>
             <p><strong>Task due date:</strong> {{ item.dueDate }}</p>
-            <p><strong>Task importance:</strong> {{ item.itemImportance }}</p>
+            <p><strong><mark [style.background] = "
+                item.itemImportance == 1 ? 'red' : 
+                item.itemImportance == 2 ? 'orange' :
+                item.itemImportance == 3 ? 'yellow' : 
+                item.itemImportance == 4 ? '#90EE90' : 
+                item.itemImportance == 5 ? 'green' :
+                'white'">
+                Task importance: {{ item.itemImportance }}</mark></strong></p>
         </div>
         <div class="task-actions">
             <button (click)="updateItem(item.itemID)" class="btn btn-blue">Update Task</button>
