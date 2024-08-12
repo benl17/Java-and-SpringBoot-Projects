@@ -32,12 +32,12 @@ export class UpdateItemComponent implements OnInit{
     });
   }
 
+  goToItemList() {
+    this.router.navigate(['/items']);
+  }
+
   onSubmit() {
     console.log(this.item);
     this.updateItem();
-  }
-
-  goToItemList() {
-    this.router.navigate(['/items']);
   }
 }
