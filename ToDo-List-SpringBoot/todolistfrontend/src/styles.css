@@ -13,7 +13,7 @@
 
 .container-squish {
     margin: 100px 0 0 100px;
-    width: 85%;
+    width: 90%;
     height: 750px;
     display: flex;
     justify-content: center;
@@ -37,7 +37,7 @@
 .task-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Adjust the gap between task boxes as needed */
+    gap: 20px; 
 }
 
 .task-box {
@@ -45,7 +45,7 @@
     padding: 20px;
     border-radius: 10px;
     background-color: #f9f9f9;
-    width: 300px; /* Adjust the width of the task boxes as needed */
+    width: 400px; /* Adjust the width of the task boxes as needed */
 }
 
 .task-details p {
