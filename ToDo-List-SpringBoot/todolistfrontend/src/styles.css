@@ -12,12 +12,14 @@
 }
 
 .container-squish {
-    margin: 100px 0 0 200px;
-    width: 70%;
-    height: 450px;
+    margin: 100px 0 0 100px;
+    width: 85%;
+    height: 750px;
     display: flex;
     justify-content: center;
     gap: 10px;
+    background-color: #967bb6;
+    border-radius: 20px;
 }
 
 .bg-lavender {

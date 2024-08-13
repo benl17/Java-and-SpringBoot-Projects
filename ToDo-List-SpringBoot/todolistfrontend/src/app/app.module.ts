@@ -8,13 +8,15 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { CreateItemComponent } from './create-item/create-item.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateItemComponent } from './update-item/update-item.component';
+import { TaskStatComponent } from './task-stat/task-stat.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ItemListComponent,
     CreateItemComponent,
-    UpdateItemComponent
+    UpdateItemComponent,
+    TaskStatComponent
   ],
   imports: [
     BrowserModule,
