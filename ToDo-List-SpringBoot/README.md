@@ -3,10 +3,10 @@ essentially deleting from the the database or they can update a task to change t
 tasks that they have completed, the success rate of them completing tasks on time and a whole list of completed tasks by item by importance level. 
 
 **Below is the front page (WORK IN PROGRESS, still finishing up some styling):**
-![todolistFrontend.png]
+![assests/todolistFrontend.png]
 
 **The create task page (WORK IN PROGRESS, still finishing up some styling):**
-![todolistCreate.png]
+![assests/todolistCreate.png]
 
 **The update task page (WORK IN PROGRESS, still finishing up some styling):**
-![todolistUpdate.png]
+![assests/todolistUpdate.png]
